@@ -62,11 +62,21 @@ def convert_csv_to_json(csv_path, csv_date):
             liste.append(val)
         # print(liste)
     return liste
+
+def filter_spain_data(json_info):
+    spain_data = [
+        province for province in json_info
+        if (province["Country/Region"] == "Spain" and province["Province/State"] != "Unknown")
+    ]
+
+    return spain_data
+
 # TODO
 # list folder
 #  if mm-dd-yyyy.json exists do nothing
 #  else use mm-dd-yyyy.csv to create it
 INPUT_DIR = Path("./csse_covid_19_data/csse_covid_19_daily_reports").absolute()
+OUTPUT_DIR_ES = Path("./csse_covid_19_data/csse_covid_19_daily_reports_es").absolute()
 today = datetime.date.today()
 delta = today - datetime.timedelta(days=7)
 for f in [f_ for f_ in listdir(str(INPUT_DIR)) if isfile(join(str(INPUT_DIR), f_))]:
@@ -76,7 +86,16 @@ for f in [f_ for f_ in listdir(str(INPUT_DIR)) if isfile(join(str(INPUT_DIR), f_
             continue
         full_path = join(str(INPUT_DIR), f)
         full_new_path = join(str(INPUT_DIR), f.replace('.csv', '.json'))
+
+        full_path_es = join(str(OUTPUT_DIR_ES), f)
+        full_new_path_es = join(str(OUTPUT_DIR_ES), f.replace('.csv', '.json'))
+
         print (f)
         json_info = convert_csv_to_json(full_path, date)
+        json_info_es = filter_spain_data(json_info)
+
         with open(full_new_path, 'w') as outfile:
             json.dump(json_info, outfile)
+
+        with open(full_new_path_es, 'w') as outfile_es:
+            json.dump(json_info_es, outfile_es)
