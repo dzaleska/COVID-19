@@ -1,7 +1,7 @@
 name: Data-Update
 on: 
   schedule:
-  - cron: "45 10 * * *"
+  - cron: "00 11 * * *"
 jobs:
   update-data:
     name: Update data from remote
@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          refs: master
+          refs: add-pipeline
           fetch-depth: 0
       - name: Update remote data
         run: |
