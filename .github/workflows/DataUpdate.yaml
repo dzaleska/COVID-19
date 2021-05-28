@@ -1,7 +1,7 @@
 name: Data-Update
 on: 
   schedule:
-  - cron: "40 8 * * *"
+  - cron: "*/15 * * * *"
 jobs:
   update-data:
     name: Update data from remote
@@ -31,4 +31,5 @@ jobs:
         run: |
           git add .
           git commit -m "Update data (auto)"
+          git pull origin master
           git push origin master
