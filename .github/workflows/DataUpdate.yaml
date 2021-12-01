@@ -1,7 +1,7 @@
 name: Data-Update
 on: 
   schedule:
-  - cron: "55 9 * * *"
+  - cron: "40 8 * * *"
 jobs:
   update-data:
     name: Update data from remote
