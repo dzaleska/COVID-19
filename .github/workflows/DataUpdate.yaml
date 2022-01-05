@@ -19,7 +19,7 @@ jobs:
           git remote add upstream https://github.com/CSSEGISandData/COVID-19
           git fetch upstream
           git branch
-          git merge -X theirs upstream/master
+          git merge upstream/master
       - name: Setup python
         uses: actions/setup-python@v2
         with:
