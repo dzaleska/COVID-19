@@ -1,7 +1,7 @@
 name: Data-Update
 on: 
   schedule:
-  - cron: "55 15 * * *"
+  - cron: "12 16 * * *"
 jobs:
   update-data:
     name: Update data from remote
@@ -19,7 +19,7 @@ jobs:
           git remote add upstream https://github.com/CSSEGISandData/COVID-19
           git fetch upstream
           git branch
-          git merge upstream/master
+          git merge -X theirs upstream/master
       - name: Setup python
         uses: actions/setup-python@v2
         with:
