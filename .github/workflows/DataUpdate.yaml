@@ -30,5 +30,6 @@ jobs:
       - name: Commit and merge
         run: |
           git add .
+          git status
           git commit -m "Update data (auto)"
           git push origin master 
