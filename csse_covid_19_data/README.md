@@ -484,6 +484,7 @@ Date: Location | File | Change | Data source for change
 * February 24, 2022: Saskatchewan, Canada | Reporting in Saskatchewan has been corrected from 03-25-2020 to 02-23-2022. This correction is to align our data with the [The Government of Canada](https://www.canada.ca/en/public-health/services/diseases/2019-novel-coronavirus-infection.html).
 * February 28, 2022: Netherlands | Reporting in the Netherlands has been corrected from 07-17-2020 to 02-27-2022. This correction is to align our data with the [The Government of Netherlands](https://coronadashboard.government.nl/verantwoording#confirmed-cases).
 * March 03, 2022: Ontario, Canada | Reporting in Ontario, Canada has been updated to include Toronto Public Health, Ottawa Public Health, Region of Peel, and Region of Halton.
+* March 10, 2022: Tennessee, US | Corrected from 2020-03-12 to 2022-02-26
 
 ## Irregular Update Schedules
 As the pandemic has progressed, several locations have altered their reporting schedules to no longer provide daily updates. As these locations are identified, we will list them in this section of the README. We anticipate that these irregular updates will cause cyclical spikes in the data and smoothing algorithms should be applied if the data is to be used for modeling.
@@ -511,7 +512,7 @@ United States
 * Massachuetts: Providing data Monday-Friday.
 * Michigan: Providing data Mondays, Wednesdays, and Fridays (as of August 9, 2021). ~~Providing data Tuesdays and Fridays (as of 07/07/2021)~~. No case data provided for August 21.
 * Minnesota: Providing data Monday-Friday.
-* Mississippi: Providing data Monday-Friday.
+* Mississippi: Providing state level data Monday-Friday. County level data updated once per week (as of March 10, 2022).
 * Missouri: Providing data Monday-Friday (as of Feb 22, 2022).
 * Montana: Providing data Monday-Friday.
 * Nebraska: Providing state level data only Monday-Friday (in composite with CDC reporting).~~Providing data Monday-Friday (as of 9/25/2021).~~ ~~Providing data Wednedays only (as of 8/11/2021)~~
